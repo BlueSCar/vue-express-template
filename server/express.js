@@ -8,7 +8,7 @@ const history = require('connect-history-api-fallback');
 
 const authRoutes = require('./auth/routes');
 
-module.exports = (db, passport) => {
+module.exports = (db, passport, rabbit) => {
     const app = express();
     app.use(helmet());
 
