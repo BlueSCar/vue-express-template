@@ -13,13 +13,13 @@ const _axios = axios.create(config); // eslint-disable-line
 
 _axios.interceptors.request.use(
     config => config, // eslint-disable-line
-    error => Promise.reject(error)
+    (error) => Promise.reject(error)
 );
 
 // Add a response interceptor
 _axios.interceptors.response.use(
-    response => response,
-    error => Promise.reject(error)
+    (response) => response,
+    (error) => Promise.reject(error)
 );
 
 Plugin.install = (Vue, options) => { // eslint-disable-line
